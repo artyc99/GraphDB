@@ -28,9 +28,9 @@ def main():
 
     g = GraphFrame(v, e)
 
-    g.vertices.show()
+    g.edges.show()
 
-    g.bfs('id = 20', 'id = 1', maxPathLength=10).show(truncate=False)
+    g.bfs('id = 20', 'id = 1', maxPathLength=4).show(truncate=False)
 
 
 if __name__ == '__main__':

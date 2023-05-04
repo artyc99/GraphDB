@@ -24,9 +24,11 @@ def load(path: str):
 
     edges = []
 
+    way = lambda x1, y1, x2, y2: math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
+
     for v1 in vertices:
         for v2 in vertices:
             if v1 is not v2:
-                edges.append((v1[0], v2[0], lambda x1, x2, y1, y2: math.sqrt((x1-x2)**2 + (y1-y2)**2)))
+                edges.append((v1[0], v2[0], way(v1[1], v1[2], v2[1], v2[2])))
 
     return vertices, edges
